@@ -1,7 +1,9 @@
+async function main(interaction) {
+	return interaction.reply('Pong!');
+}
+
 module.exports = {
 	name: 'ping',
 	description: 'Replies with Pong!',
-	async execute(interaction) {
-		return interaction.reply('Pong!');
-	},
+	execute: main
 };

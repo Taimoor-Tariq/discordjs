@@ -1,9 +1,10 @@
+async function main(client) {
+    await require('../modules/slash-loader')(client);
+    console.log(`\nReady! Logged in as ${client.user.tag}`);
+}
+
 module.exports = {
     name: 'ready',
     once: true,
-    execute(client) {
-        require('../modules/slash-loader')(client).then(() => {
-            console.log(`\nReady! Logged in as ${client.user.tag}`);
-        });
-    }
+    execute: main
 };
