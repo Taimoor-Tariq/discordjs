@@ -1,9 +1,9 @@
 const { BOT_PREFIX } = require('../config');
 
 module.exports = {
-	name: 'messageCreate',
-	execute(message, client) {
-		if (message.author.bot) return;
+    name: 'messageCreate',
+    execute(message, client) {
+        if (message.author.bot) return;
 
         if (message.content.indexOf(BOT_PREFIX) !== 0) return;
 
@@ -16,5 +16,5 @@ module.exports = {
 
         if (!client.commands.has(command)) return;
         client.commands.get(command).execute(client, message, args);
-	}
+    }
 };
