@@ -5,7 +5,7 @@ async function main(interaction, client) {
     }
 
     else if (interaction.isButton()) {
-        switch (interaction.customID) {
+        switch (interaction.customId) {
             case "BUTTON_ID":
                 
                 break;
@@ -13,7 +13,7 @@ async function main(interaction, client) {
     }
 
     else if (interaction.isSelectMenu()) {
-        switch (interaction.customID) {
+        switch (interaction.customId) {
             case "SELECT_ID":
                 
                 break;
