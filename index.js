@@ -5,7 +5,7 @@ const
     client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES] });
 
 client.commands = new Collection();
-client.slashCommands = new Collection();
+client.appCommands = new Collection();
 
 console.log(` \nLoading Commands and events:\n `);
 

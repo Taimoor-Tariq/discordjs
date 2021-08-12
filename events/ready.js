@@ -1,5 +1,5 @@
 async function main(client) {
-    await require('../modules/slash-loader')(client);
+    await require('../modules/app-commands-loader')(client);
     console.log(`\nReady! Logged in as ${client.user.tag}`);
 }
 

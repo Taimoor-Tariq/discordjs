@@ -3,7 +3,9 @@ async function main(interaction) {
 }
 
 module.exports = {
-	name: 'ping',
-	description: 'Replies with Pong!',
+	data: {
+		name: 'ping',
+		description: 'Replies with Pong!'
+	},
 	execute: main
 };
