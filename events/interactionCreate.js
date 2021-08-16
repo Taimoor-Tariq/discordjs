@@ -15,6 +15,8 @@ async function main(interaction, client) {
 
                     break;
             }
+
+            interaction.deferUpdate();
             break;
     }
 }
