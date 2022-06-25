@@ -5,11 +5,8 @@ async function main(message, client) {
 
     if (message.content.indexOf(BOT_PREFIX) !== 0) return;
 
-    let args = message.content
-        .slice(BOT_PREFIX.length)
-        .trim()
-        .split(/ +/g);
-    
+    let args = message.content.slice(BOT_PREFIX.length).trim().split(/ +/g);
+
     const command = args.shift().toLocaleLowerCase();
 
     if (!client.commands.has(command)) return;
@@ -18,5 +15,5 @@ async function main(message, client) {
 
 module.exports = {
     name: 'messageCreate',
-    execute: main
+    execute: main,
 };
