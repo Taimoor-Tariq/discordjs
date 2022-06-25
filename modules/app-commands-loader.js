@@ -1,7 +1,7 @@
 const fs = require('fs'),
     { REST } = require('@discordjs/rest'),
     { Routes } = require('discord-api-types/v9'),
-    { BOT_TOKEN } = require('../config'),
+    { BOT_TOKEN, GUILD_ID } = require('../config'),
     rest = new REST({ version: '9' }).setToken(BOT_TOKEN);
 
 module.exports = (client) => {
@@ -16,7 +16,7 @@ module.exports = (client) => {
                 data.push(command.data);
             });
 
-        await rest.put(Routes.applicationCommands(client.user.id), { body: data });
+        await rest.put(Routes.applicationGuildCommands(client.user.id, GUILD_ID), { body: data });
 
         console.log('Successfully reloaded application (/) commands.');
 

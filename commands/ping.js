@@ -1,5 +1,5 @@
 async function main(client, message, args) {
-    message.channel.send({ content: 'Pong!', ephemeral: true });
+    message.channel.send({ content: 'Pong!' });
 }
 
 module.exports = {
