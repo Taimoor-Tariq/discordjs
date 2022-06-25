@@ -4,15 +4,17 @@
     "description": "Template for discordjs",
     "main": "index.js",
     "scripts": {
-        "start": "node ."
+        "start": "node .",
+        "prettier": "prettier -w \"**/*.{js,json}\""
     },
     "author": "Taimoor-Tariq",
     "license": "MIT",
     "dependencies": {
-        "@discordjs/rest": "^0.1.0-canary.0",
-        "discord-api-types": "^0.22.0",
-        "discord.js": "^13.1.0",
-        "dotenv": "^10.0.0"
+        "@discordjs/rest": "^0.5.0",
+        "discord-api-types": "^0.35.0",
+        "discord.js": "^13.8.1",
+        "dotenv": "^16.0.1",
+        "prettier": "^2.7.1"
     },
     "engines": {
         "node": "16.6.x"
