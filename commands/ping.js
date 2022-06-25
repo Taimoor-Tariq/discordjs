@@ -1,9 +1,8 @@
-async function main(client, message, args) {
-	message.channel.send({ content: "Pong!", ephemeral: true });
-}
+const { SlashCommandBuilder } = require('@discordjs/builders');
 
 module.exports = {
-	name: 'ping',
-	description: 'Replies with Pong!',
-	execute: main
+    data: new SlashCommandBuilder().setName('ping').setDescription('Replies with Pong!').toJSON(),
+    async execute(client, interaction) {
+        await interaction.reply('Pong!');
+    },
 };

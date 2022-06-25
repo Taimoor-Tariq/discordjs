@@ -1,6 +1,7 @@
-if (!process.env.TOKEN) require('dotenv').config();
+require('dotenv').config();
 
 module.exports = {
-    BOT_TOKEN: process.env.TOKEN,
-    BOT_PREFIX: ".",
-}
+    TOKEN: process.env.TOKEN,
+    CLIENT_ID: process.env.CLIENT_ID,
+    GUILD_ID: process.env.GUILD_ID,
+};

@@ -2,14 +2,17 @@
     "name": "discordjs",
     "version": "1.0.0",
     "description": "Template for discordjs",
+    "license": "MIT",
+    "author": "Taimoor-Tariq",
     "main": "index.js",
     "scripts": {
-        "start": "node .",
+        "start": "npm run deploy:commands && npm run deploy:bot",
+        "deploy:bot": "node index.js",
+        "deploy:commands": "node deploy-commands.js",
         "prettier": "prettier -w \"**/*.{js,json}\""
     },
-    "author": "Taimoor-Tariq",
-    "license": "MIT",
     "dependencies": {
+        "@discordjs/builders": "^0.15.0",
         "@discordjs/rest": "^0.5.0",
         "discord-api-types": "^0.35.0",
         "discord.js": "^13.8.1",
